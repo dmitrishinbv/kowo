@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*
+Theme Name: Olberg
+Theme URI:
+Version: 1.0
+
+ */
+
+[type='number'] {
+    width: 6em;
+}
+
+button {
+    margin: 0 5px;
+}
+
+button.add-info.button.button-primary {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+[class^='list-'] [class^='item-'] {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.inside .info [class^='list-'] h6 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px
+}
+
+.remove-info {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.inside .info [class *='item-'], .document-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbccdd;
+}
+
+.inside .info [class *='item-'] label {
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.inside .info [class *='item-'] input {
+    width: 58%;
+    margin-bottom: 20px;
+}
+
+.image-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.time-flex {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 700px;
+}
+
+.description {
+    padding-left: 10px;
+}
+
+.inside .info h6 {
+    text-decoration: underline;
+}
+
+.inside .gallery-info {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.inside .gallery-list button {
+    margin-bottom: 10px;
+}
+
+#frontpage_info h2, .postbox h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.image-preview {
+    margin-left: 42%;
+}
+
+
+.image-preview img {
+    display: block;
+    margin-left: -72%;
+    max-width: 300px;
+    max-height: 300px !important;
+}

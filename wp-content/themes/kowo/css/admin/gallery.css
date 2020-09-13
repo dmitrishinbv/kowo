@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*
+Theme Name: Dobras
+Theme URI:
+Version: 1.0
+ */
+
+button.add-btn-gallery.button {
+    margin-bottom: 25px;
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-gallery {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    overflow: hidden;
+}
+
+.gallery-list .item-gallery > img {
+    max-width: 170px;
+    max-height: 170px;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-list .item-gallery > div .remove_image_button {
+    margin-top: 25px;
+}

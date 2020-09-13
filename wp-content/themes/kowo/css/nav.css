@@ -1,0 +1,598 @@
+.main-header .main-nav {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.main-header {
+    height: 300px;
+}
+
+.main-header .main-nav .right-col .menu .menu-list {
+    list-style: none;
+    display: flex;
+}
+
+.main-header .main-nav .left-col {
+    width: 30%;
+}
+
+.main-header .main-nav .left-col .logo {
+    margin-top: 46px;
+    position: relative;
+    z-index: 10;
+}
+
+.main-header .main-nav .left-col .logo > a > img{
+    max-width: 200px;
+}
+
+.burger {
+    position: relative;
+    width: 25px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.burger > span {
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    border-radius: 1px;
+
+}
+.burger > span::before,
+.burger > span::after{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 25px;
+    height: 4px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 1px;
+}
+
+.burger > span::before{
+    top: -10px;
+}
+
+.burger > span::after{
+    top: 10px;
+}
+
+.burger.burger-btn_active > span{
+    background: rgba(0,0,0,0);
+}
+
+.burger.burger-btn_active > span::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger.burger-btn_active > span::after{
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.main-header .main-nav .right-col {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.main-header .main-nav .right-col .menu {
+    margin: 54px 0 38px 0;
+}
+
+.main-header .main-nav .right-col .title-page {
+    font-family: Playfair Display, serif;
+    font-size: 96px;
+    line-height: 128px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 63px;
+}
+
+.main-header .main-nav .right-col .menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-header .main-nav .right-col .menu .menu-list {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-header .main-nav .right-col .menu .menu-list > .menu-item:not(.lang-item) {
+    margin-left: 60px;
+}
+
+.main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item > a {
+    padding: 4px;
+}
+
+.main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item > a {
+    font-weight: 500;
+    color: #636363;
+}
+
+.main-header .main-nav .right-col .menu .menu-list > .menu-item.current-menu-item {
+    border-bottom: 1px solid #D9B25F;
+}
+
+.main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item.current-lang > a {
+    color: #D9B25F;
+}
+
+.main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+    margin-left: 141px;
+    padding-right: 1px;
+    border-right: 1px solid #C4C4C4;
+}
+
+.main-header .main-nav .right-col .menu .menu-list .menu-item a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+
+.menu-list .menu-item-has-children {
+    position: relative;
+}
+
+.menu-list .menu-item-has-children::after {
+    content: '';
+    background: url('../img/dfdf.png') center no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    top: 7px;
+    right: -13px;
+    transition: 0.1s transform linear;
+}
+
+@media (min-width: 981px) {
+    .menu-list .menu-item-has-children:hover::after {
+        transform: rotate(180deg);
+    }
+}
+
+.menu-list .menu-item-has-children > ul {
+    background: #D9B25F;
+    display: none;
+    min-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    border: 1px solid #2f3542;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.sub-menu > li.menu-item {
+   width: 100%;
+    border: none;
+}
+
+.sub-menu > li.menu-item a {
+    padding: 10px 10px 0 10px;
+    border: none;
+}
+
+ .sub-menu > li.menu-item:last-child a {
+     padding-bottom: 10px;
+ }
+
+.social-list {
+    list-style: none;
+    margin-top: 48px;
+}
+
+.social-list .social-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.social-list .social-item:last-child {
+    margin-bottom: 49px;
+}
+
+@media (min-width: 931px) {
+    .menu-list .menu-item-has-children:hover ul {
+        display: block;
+    }
+}
+
+@media (max-width: 1610px) {
+    .main-header .main-nav .right-col .title-page {
+        font-size: 80px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        margin-left: 83px;
+    }
+}
+
+@media (max-width: 1480px) {
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        margin-left: 57px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .main-header .main-nav .right-col .title-page {
+        font-size: 65px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list > .menu-item:not(.lang-item) {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .main-header .main-nav .right-col .title-page {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .main-header .main-nav .right-col .menu .menu-list .menu-item a,
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item > a {
+        font-size: 11px;
+    }
+
+    .main-header .main-nav .right-col .title-page {
+        font-size: 50px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-header .main-nav .right-col .title-page {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .main-header {
+        height: 270px !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .main-header .main-nav .left-col .logo {
+        margin-top: 38px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item {
+        margin-top: 40px;
+    }
+
+    .main-header .fon .lines {
+        position: absolute;
+        width: 440px;
+        height: 270px;
+        left: 0;
+        top: 0;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        position: static;
+        margin-top: 35px;
+        margin-left: -22px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-ru {
+        position: static;
+        margin-top: -25px;
+        margin-left: 32px;
+    }
+
+    .main-header .main-nav .right-col div.menu .menu-list {
+        display: block;
+    }
+
+    .active-fon .main-header .main-nav .right-col div.menu,
+    .active-fon .main-header .main-nav .left-col .social {
+        display: flex;
+    }
+
+    .main-header .main-nav .right-col div.menu .menu-list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list > .menu-item:not(.lang-item) {
+        margin-bottom: 17px;
+    }
+
+    .main-header .main-nav .right-col .menu {
+        padding-top: 103px !important;
+    }
+
+    .main-header .main-nav .right-col div.menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        display: none;
+        align-items: flex-start;
+        justify-content: center;
+        overflow-y: auto;
+        padding: 0;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item a {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        display: block;
+    }
+
+    .main-header .main-nav .right-col .title-page {
+        font-size: 46px;
+        line-height: 61px;
+    }
+
+    .burger.burger-btn_active {
+        position: fixed;
+        top: 49px;
+        right: 30px;
+        margin: 0;
+    }
+
+    .burger {
+        display: block;
+        margin: 42px 0 54px 0;
+    }
+
+    .wrapper.active-fon .logo > a > img {
+        position: fixed;
+        margin: 0;
+        top: 49px;
+        left: 30px;
+    }
+
+    .main-header .fon .image {
+      display: none;
+    }
+
+    .social {
+        display: none;
+        position: absolute;
+        bottom: 471px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 139px;
+        z-index: 10;
+        padding-left: 13px;
+        height: 16px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list > .menu-item:not(.lang-item) {
+        margin-left: 0 !important;
+    }
+
+    .social-list {
+        display: flex;
+        justify-content: space-between;
+        width: 121px;
+        margin: 0;
+    }
+
+    .wrapper.active-fon::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 9;
+    }
+
+    .menu-list .menu-item-has-children > ul {
+        width: 150px;
+        right: -44px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list {
+        max-width: 33%;
+    }
+
+    .menu-list .menu-item-has-children.has-children-active::after {
+        transform: rotate(180deg);
+    }
+}
+
+
+@media (max-width: 780px) {
+    .burger {
+        margin: 42px 0 54px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger {
+        margin: 35px 0 54px 0;
+    }
+
+    .main-header .main-nav .right-col .title-page {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .main-header {
+        height: 160px !important;
+    }
+
+    .main-header .main-nav .left-col .logo {
+        margin-top: 15px;
+    }
+
+    .main-header .main-nav .left-col .logo a .img {
+        height: 40px !important;
+    }
+
+    .main-header .main-nav .right-col .title-page {
+        margin-bottom: 44px;
+    }
+
+    .main-header .fon .lines {
+        position: absolute;
+        width: 440px;
+        height: 160px;
+        left: -220px;
+        top: 0;
+    }
+
+    .burger.burger-btn_active {
+        position: fixed;
+        top: 19px;
+        right: 5px;
+        margin: 0;
+    }
+
+    .wrapper.active-fon .logo > a > img {
+        position: fixed;
+        margin: 0;
+        top: 14px;
+        left: 5px;
+    }
+
+}
+
+@media (max-width: 460px) {
+    .social {
+        left: 0;
+        bottom: 17px;
+        position: fixed;
+        margin: 0 0 0 0;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        right: 0;
+        bottom: 0;
+        margin-bottom: 13px;
+        margin-right: 27px;
+        position: fixed;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-ru {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 13px;
+        margin-right: 2px;
+    }
+
+    .main-header .main-nav .right-col div.menu .menu-list {
+        justify-content: flex-start;
+        height: 500px;
+    }
+}
+
+@media (max-height: 450px) {
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        position: static;
+        margin-top: 7px;
+        margin-left: -22px;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-ru {
+        position: static;
+        margin-top: -25px;
+        margin-left: 32px;
+    }
+
+    .social {
+        position: absolute;
+        top: 318px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 122px;
+    }
+
+    .main-header .main-nav .right-col .menu {
+        padding-top: 50px !important;
+    }
+}
+
+@media (max-height: 375px) and (max-width: 812px) {
+    .burger.burger-btn_active {
+        top: 24px;
+    }
+
+    .wrapper.active-fon .logo > a > img {
+        top: 17px;
+    }
+}
+
+@media (max-height: 376px) {
+    .social {
+        top: 293px;
+    }
+}
+
+@media (max-height: 320px) {
+    .main-header .main-nav .right-col .menu {
+        padding-top: 10px !important;
+    }
+
+    .social {
+        top: 248px;
+    }
+}
+
+@media (max-height: 300px) {
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-first {
+        right: 0;
+        bottom: 0;
+        margin-bottom: 13px;
+        margin-right: 27px;
+        position: fixed;
+    }
+
+    .main-header .main-nav .right-col .menu .menu-list .menu-item.lang-item-ru {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 13px;
+        margin-right: 2px;
+    }
+
+    .social {
+        left: 0;
+        top: 90%;
+        position: fixed;
+        margin: 0 0 0 0;
+    }
+
+    .burger.burger-btn_active {
+        top: 19px !important;
+    }
+}

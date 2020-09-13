@@ -1,0 +1,347 @@
+#footer {
+    background: #D9B25F;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+#footer .footer-main .footer-content .footer-contacts .info div {
+    color: #FFFFFF;
+}
+
+#footer .footer-main .footer-content .footer-contacts .info div {
+    text-transform: inherit;
+}
+
+#footer .footer-main {
+    display: flex;
+}
+
+#footer .footer-main .footer-content {
+    padding-top: 88px;
+}
+
+#footer .footer-main .footer-content {
+    width: 40%;
+    position: relative;
+    z-index: 2;
+}
+
+#footer .footer-main .footer-content::after {
+    content: '';
+    position: absolute;
+    right: -45%;
+    top: 0;
+    width: 64%;
+    height: 100%;
+    background: url('../img/twxtura-footer.png') top right repeat-y;
+    background-size: 100%;
+    z-index: 0;
+}
+
+#footer .footer-main .footer-content h2,
+#footer .footer-main .footer-content .footer-address-street,
+#footer .footer-main .footer-content .footer-contacts,
+#footer .footer-main .footer-content .footer-mail {
+    position: relative;
+    z-index: 4;
+}
+
+#footer .footer-main .footer-map {
+    width: 60%;
+}
+
+#footer .footer-main .footer-content img {
+    margin-right: 12px;
+}
+
+#footer .footer-main .footer-content .footer-address-street {
+    margin-bottom: 18px;
+}
+
+#footer .footer-main .footer-content .footer-contacts {
+    margin-bottom: 20px;
+}
+
+#footer .footer-main .footer-content .footer-mail {
+    margin-bottom: 140px;
+}
+
+#footer .footer-main .footer-content .footer-address-street,
+#footer .footer-main .footer-content .footer-contacts,
+#footer .footer-main .footer-content .footer-mail {
+    display: flex;
+}
+
+.footer-main .footer-content .footer-contacts {
+    align-items: center;
+}
+
+#footer .footer-main .footer-content .footer-address-street {
+    align-items: flex-end;
+}
+
+#footer .footer-main .footer-content .footer-mail {
+    align-items: flex-start;
+}
+
+#footer .footer-main .footer-content .footer-mail .info {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .footer-main .footer-content .footer-mail img {
+    align-self: center;
+}
+
+#footer .footer-main .footer-content .footer-address-street .footer-address,
+#footer .footer-main .footer-content h2,
+#footer .footer-main .footer-content .footer-address-street .footer-country,
+#footer .footer-main .footer-content .footer-contacts .info .phone > span,
+#footer .footer-main .footer-content .footer-contacts .info .phone {
+    text-transform: uppercase;
+}
+
+#footer .footer-main .footer-content .footer-address-street .footer-address,
+#footer .footer-main .footer-content h2,
+#footer .footer-main .footer-content .footer-contacts .info .phone > span,
+#footer .footer-main .footer-content .footer-mail .info .info-mail {
+    font-weight: 900;
+}
+
+#footer .footer-main .footer-content .footer-address-street .footer-country,
+#footer .footer-main .footer-content .footer-contacts .info div,
+#footer .footer-main .footer-content .footer-contacts .info .phone,
+#footer .footer-copyright {
+    font-weight: 500;
+}
+
+#footer .footer-main .footer-content h2 {
+    font-family: Playfair Display;
+    font-size: 64px;
+    line-height: 85px;
+    letter-spacing: 0.4em;
+    margin: 0 0 42px 0;
+    color: #FFFFFF;
+}
+
+#footer .footer-main .footer-content .footer-address-street .footer-address,
+#footer .footer-main .footer-content .footer-contacts .info div,
+#footer .footer-main .footer-content .footer-contacts .info .phone > span,
+#footer .footer-main .footer-content .footer-contacts .info .phone,
+#footer .footer-main .footer-content .footer-mail .info .info-mail {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+#footer .footer-main .footer-content .footer-address-street .footer-country {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+#footer .footer-main .footer-content .footer-mail .info .btn-footer {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #D9B25F;
+    border: 1px solid #FFFFFF;
+    width: 195px;
+    box-sizing: border-box;
+    padding: 10px 0 9px 0;
+    cursor: pointer;
+    outline: transparent;
+}
+
+#footer .footer-copyright {
+    font-size: 12px;
+    line-height: 15px;
+    background-color: #D2A952;
+    text-align: center;
+    padding: 28px 0 27px 0;
+}
+
+#map {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+#map .leaflet-pane {
+    z-index: 4;
+}
+
+.leaflet-left .leaflet-control {
+    display: none;
+}
+
+@media (max-width: 1510px) {
+    #footer .footer-main .footer-content h2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1430px) {
+    #footer .footer-main .footer-content .footer-mail .info .btn-footer {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 1170px) {
+    #footer .footer-main .footer-content h2 {
+        font-size: 42px;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info .btn-footer {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info {
+        flex-direction: column;
+    }
+
+    #footer .footer-main .footer-content {
+        padding-top: 15px;
+    }
+
+    #footer .footer-main .footer-content .footer-mail img {
+        align-self: center;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info {
+        align-items: center;
+    }
+
+    #footer .footer-main .footer-content .footer-contacts {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 980px) {
+    #footer .footer-main.container {
+        width: 100%;
+    }
+
+    #footer .footer-main {
+        flex-direction: column;
+    }
+
+    #footer .footer-main .footer-map {
+        width: 100%;
+        height: 60vh;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info {
+        flex-direction: row;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info .btn-footer {
+        margin: 0;
+    }
+
+    #footer .footer-main .footer-content {
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    #footer .footer-main .footer-content .footer-mail {
+        margin-bottom: 52px;
+    }
+
+    #footer .footer-main .footer-content {
+        padding-top: 30px;
+    }
+
+    #footer .footer-main .footer-content h2 {
+        margin: 0 0 58px 0;
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    #footer .footer-main .footer-content .footer-address-street .footer-address,
+    #footer .footer-main .footer-content .footer-contacts .info div,
+    #footer .footer-main .footer-content .footer-contacts .info .phone > span,
+    #footer .footer-main .footer-content .footer-contacts .info .phone,
+    #footer .footer-main .footer-content .footer-mail .info .info-mail {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    #footer .footer-copyright {
+        font-size: 12px;
+    }
+
+    #footer .footer-main .footer-content::after {
+        right: 0;
+        width: 43%;
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer .footer-main .footer-content {
+        padding-left: 20px;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info {
+        flex-direction: column;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info .btn-footer {
+        margin-top: 35px;
+    }
+
+    #footer .footer-main .footer-content h2 {
+        margin: 0 0 27px 0;
+    }
+
+    #footer .footer-main .footer-content .footer-mail {
+        margin-bottom: 38px;
+    }
+
+    #footer .footer-copyright {
+        font-size: 9px;
+    }
+
+    #footer .footer-main .footer-content::after {
+        background-size: 0;
+    }
+
+    #footer .footer-main .footer-content .footer-contacts img {
+        margin-bottom: 8px;
+    }
+    
+    .footer-main .footer-content .footer-contacts {
+        align-items: flex-end;
+    }
+
+    #footer .footer-main .footer-content .footer-mail img {
+        align-self: flex-start;
+    }
+
+    #footer .footer-main .footer-content .footer-mail .info {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #footer .footer-main .footer-content .footer-contacts {
+        margin-bottom: 24px;
+    }
+}
+
+.leaflet-touch .leaflet-control-attribution, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    display: none;
+}
+
+@media (max-width: 350px) {
+    #footer .footer-main .footer-content h2 {
+        font-size: 30px;
+    }
+}
