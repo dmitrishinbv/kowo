@@ -1,16 +1,14 @@
 <?php get_header(); ?>
 <?php
-do_action('HomePageStyle');
-do_action('VidbgModule');
-do_action('PageNotFoundStyles');
+do_action('PageNotFoundStyle');
 ?>
 
     <div class="page-404">
         <h2>
-            <?php pll_e('404 Сторінку не знайдено'); ?>
+            <?php pl_e('404 Сторінку не знайдено'); ?>
         </h2>
         <a href="/">
-            <?php pll_e("Повернутись на головну") ?>
+            <?php pl_e("Повернутись на головну") ?>
         </a>
     </div>
 

@@ -1,0 +1,180 @@
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: show 2s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.slick-slide {
+    margin: 0 30px;
+    min-height: 398px;
+    opacity: 0.7;
+}
+
+.slick-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin: -35px 0 0 0;
+    z-index: 2;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.slick-arrow:hover {
+    transition: 500ms ease-in-out;
+    background: #ff7976;
+}
+
+.slick-arrow.slick-prev {
+    background: url('../../img/svg/back.svg') 0 0 / 100% no-repeat;;
+    left: 1px;
+}
+
+
+.slick-arrow.slick-next {
+    background: url('../../img/svg/next.svg') 0 0 / 100% no-repeat;;
+    right: 1px;
+}
+
+.slick-slide.slick-current {
+    opacity: unset;
+}
+
+.slick-slide .news img {
+    max-width: 720px;
+    width: 100%;
+    height: 398px;
+}
+
+.slick-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 8;
+    margin-left: 70px;
+}
+
+
+.slick-dots button {
+    font-size: 0;
+    padding: 0;
+}
+
+.slick-dots li button {
+    visibility: hidden;
+    width: 10px;
+    height: 10px;
+}
+
+.slick-dots li {
+    padding: 0 10px;
+    color: rgb(255, 121, 118);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.slick-dots .slick-active {
+    color: black;
+}
+
+
+@media (max-width: 1600px) {
+    .slick-slide {
+        min-height: 370px;
+    }
+
+    .slick-slide .news img {
+        max-width: 670px;
+        height: 370px;
+    }
+}
+
+
+@media (max-width: 820px) {
+    .slick-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .slick-slide {
+        min-height: 350px;
+        margin: 0 20px;
+    }
+
+    .slick-slide .news img {
+        max-width: 633px;
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .slick-slide {
+        min-height: 309px;
+    }
+
+    .slick-slide .news img {
+        max-width: 560px;
+        height: 309px;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .slick-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slick-slide {
+        min-height: 265px;
+    }
+
+    .slick-slide .news img {
+        max-width: 480px;
+        height: 265px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slick-slide {
+        min-height: 227px;
+        margin: 0 10px;
+    }
+
+    .slick-slide .news img {
+        max-width: 410px;
+        height: 227px;
+    }
+}
+
+
+@media (max-width: 410px) {
+    .slick-slide {
+        min-height: 194px;
+    }
+
+    .slick-slide .news img {
+        max-width: 350px;
+        height: 194px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .slick-slide {
+        min-height: 166px;
+    }
+
+    .slick-slide .news img {
+        max-width: 300px;
+        height: 166px;
+    }
+}

@@ -1,0 +1,209 @@
+.container {
+    flex-direction: column;
+}
+
+.top-block {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.top-block .t-container .t-wrapper h2 {
+    font-size: 72px;
+    line-height: 1.17;
+}
+
+.top-block .cover .t-cover__filter {
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30));
+}
+
+.t-rec:nth-of-type(1) {
+    padding-top: 30px;
+}
+
+.announcements {
+    margin-top: 30px;
+}
+
+.announcements, .page-events .previous-events, .slider {
+    margin-bottom: 30px;
+}
+
+.title {
+    position: relative;
+    height: 80px;
+    background-color: #fff;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll
+}
+
+.title-line {
+    width: 100%;
+    top: 20px;
+    height: 1px;
+    z-index: 1;
+    position: absolute;
+    background-color: #000000;
+}
+
+.title h5 {
+    display: block;
+    position: relative;
+    width: fit-content;
+    width:-moz-fit-content;
+    margin: 0 auto;
+    background-color: black;
+    padding: 8px 30px;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    font-size: 16px;
+    font-family: 'Arial', Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.current-item {
+    max-width: 45%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.current-item:nth-of-type(odd) {
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+.current-item:nth-of-type(even) {
+    margin-right: 10px;
+}
+
+
+.current-item .event-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+}
+
+.current-item h6 {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.35;
+    color: #000;
+}
+
+.current-item p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-top: 10px;
+}
+
+.current-item .btn-row {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.current-item .btn-row a {
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: content-box;
+    padding-right: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.current-item .btn-row div {
+    width: fit-content;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+.current-item .btn-row .fb-btn {
+    color: #ffffff;
+    background-color: #a7ce5b;
+    border: 1px solid #6e8942;
+}
+
+.current-item .btn-row .register-btn {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.current-item .btn-row div:hover {
+    border: 1px solid #ff7976;
+    background: #ff7976;
+}
+
+.current-item .btn-row .register-btn:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 1320px) {
+    .current-item:nth-of-type(odd) {
+        margin-left: 30px;
+    }
+}
+
+
+@media (max-width: 1150px) {
+    .current-item:nth-of-type(odd) {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .announcements,
+    .page-events .previous-events {
+        margin-bottom: 20px;
+    }
+
+    .top-block .t-container .t-wrapper h2 {
+        font-size: 52px;
+    }
+
+    .current-item {
+        margin: 0 auto 20px auto !important;
+        max-width: 95%;
+    }
+
+    .current-item a {
+        text-align: center;
+    }
+
+    .current-item .btn-row {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .current-item .btn-row a {
+        margin: 20px 0;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .top-block .t-container .t-wrapper h2 {
+        font-size: 36px;
+    }
+}

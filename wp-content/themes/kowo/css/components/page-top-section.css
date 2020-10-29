@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.top-block {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.top-block .cover {
+    height: 40vh;
+    width: 100%;
+    background-color: #000;
+    background-attachment: fixed !important;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.top-block .cover .t-cover {
+    height: 40vh;
+    opacity: 1;
+    transition: opacity 800ms;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    background-attachment: fixed !important;
+}
+
+.top-block .cover .t-cover__filter {
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+}
+
+.top-block .t-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.top-block .t-container .t-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+      letter-spacing: .5px;
+    font-weight: 600;
+}
+
+.top-block .t-container .t-wrapper h2 {
+    text-transform: uppercase;
+    margin: 74px 0 54px 0;
+}
+
+.top-block .t-container .t-wrapper h3 {
+    font-size: 34px;
+    line-height: 1.4;
+}
+
+
+@media (max-width: 960px) {
+    .top-block {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .top-block .cover,
+    .top-block .cover .t-cover__filter {
+        height: 20vh;
+    }
+
+    .top-block .cover .t-cover {
+        display: none;
+    }
+
+    .top-block .t-container .t-wrapper h2 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-block .cover,
+    .top-block .cover .t-cover__filter {
+        min-height: 200px;
+        height: 15vh;
+    }
+
+
+    .top-block .t-container .t-wrapper h2 {
+        font-size: 36px;
+    }
+}

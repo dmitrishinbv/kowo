@@ -1,98 +1,68 @@
+<?php
+global $theme_options;
+$theme_options = get_option('theme_options');
+global $HomeUrl;
+$HomeUrl = pll_home_url();
+global $theme_uri;
+$theme_uri = get_template_directory_uri();
+global $CurrenLanguage;
+$CurrenLanguage = pll_current_language();
+global $ID;
+$ID = get_the_ID();
+global $cat_id_announs, $cat_id_prev;
+if ($CurrenLanguage === 'ua') {
+    $cat_id_announs = 24;
+    $cat_id_prev = 26;
+    $home = get_site_url();
+}
+if ($CurrenLanguage === 'ru') {
+    $cat_id_announs = 33;
+    $cat_id_prev = 37;
+    $home = get_site_url().'/ru/';
+}
+if ($CurrenLanguage === 'en') {
+    $cat_id_announs = 35;
+    $cat_id_prev = 39;
+    $home = get_site_url().'/en/';
+}
+
+?>
+
 <!doctype html>
-<html lang="uk">
+<html <?php language_attributes(); ?>>
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&family=Playfair+Display:wght@400;900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="<?php echo $theme_uri.'/img/favicon-32x32.png' ?>">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?php echo wp_get_document_title(); ?></title>
+    <title><?php echo get_bloginfo('name'); ?></title>
 
-    <?php
-    wp_head();
-    get_template_part('template/init_globals'); //подключаем глобальные переменные
-    global $theme_options;
-    global $options_prod_blog;
-    $social_link1 = $theme_options['social_link1'];
-    $social_link2 = $theme_options['social_link2'];
-    $social_link3 = $theme_options['social_link3'];
-    $social_img1 = $theme_options['social_img1'];
-    $social_img2 = $theme_options['social_img2'];
-    $social_img3 = $theme_options['social_img3'];
-    $logo_id = (isset($theme_options['site_logo']) ? $theme_options['site_logo'] : '#');
+    <?php wp_head(); ?>
 
-    if (is_404()) {
-        do_action('HomePageStyle');
-        do_action('VidbgModule');
-        do_action('PageNotFoundStyles');
-    }
-
-    $used_pll = false;
-
-    if (is_tax()) {
-        $title = single_cat_title('', 0);
-        $current_term = get_queried_object();
-        $id = get_term_meta($current_term->term_id, 'image_fon_meta', 1);
-        $src = wp_get_attachment_image_url($id, 'full');
-
-    } else if (is_category()) {
-        $used_pll = true;
-        $title = $options_prod_blog['title_page_blog'];
-        $id = $options_prod_blog['page_blog_img'];
-        $src = wp_get_attachment_image_url($id, 'full');
-
-    } else {
-        $title = get_the_title();
-        $src = wp_get_attachment_image_url(get_post_thumbnail_id(), 'full');
-    }
-    ?>
 </head>
 <body>
 <div class="wrapper">
     <header class="main-header">
-        <div class="fon">
-            <div class="lines"></div>
-            <div class="lazy image video-container" style="  background: url(<?php echo $src ?>) no-repeat center;
-                    background-size: cover;">
+        <div class="logo-row container">
+            <h1><?php pl_e('Креативний ІТ-простір');  ?></h1>
+            <input id="site_url" type="text" hidden value="<?php echo get_site_url() ?>">
+            <?php if (!is_front_page()) { ?>
+            <a href="<?php echo $home ?>"
+               class="logo-link"><img alt="Kowo logo" src="<?php echo $theme_uri.'/img/kowologo.png' ?>"></a>
+            <?php }
+            else { ?>
+            <a class="logo-link"><img alt="Kowo logo" src="<?php echo $theme_uri.'/img/kowologo.png' ?>"></a>
+            <?php } ?>
+            <a class='phone' href="tel:+38<?php echo preg_replace("/[^0-9]/", '',
+                $theme_options['company_header_phone']); ?>" >✆ <?php echo $theme_options['company_header_phone'] ?></a>
+            <div class="burger">
+                <span></span>
             </div>
         </div>
-
         <nav class="main-nav container">
-            <div class="left-col">
-                <div class="logo">
-                    <a href="<?php echo get_home_url(); ?>">
-                        <img class="lazy" src="<?php echo wp_get_attachment_image_url($logo_id, 'logo_image') ?>"
-                             alt="company_logo">
-                    </a>
-                </div>
-                <div class="social">
-                    <ul class="social-list">
-                        <li class="social-item">
-                            <a href="<?php echo $social_link1; ?>">
-                                <img src="<?php echo wp_get_attachment_image_url($social_img1, 'medium') ?>"
-                                     alt="social 1">
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="<?php echo $social_link2; ?>">
-                                <img src="<?php echo wp_get_attachment_image_url($social_img2, 'medium') ?>"
-                                     alt="social 2">
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="<?php echo $social_link3; ?>">
-                                <img src="<?php echo wp_get_attachment_image_url($social_img3, 'medium') ?>"
-                                     alt="social 3">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="right-col">
-                <div class="burger">
-                    <span></span>
-                </div>
+
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'main_nav_menu',
@@ -102,19 +72,6 @@
                     'menu_class' => 'menu-list',
                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 ]);
-
-                if (!is_front_page()) {
-                    ?>
-
-                    <h1 class="title-page">
-                        <?php
-                        if ($used_pll) {
-                            pl_e($title);
-                        } else {
-                            echo $title;
-                        } ?>
-                    </h1>
-                <?php } ?>
-            </div>
+ ?>
         </nav>
     </header>

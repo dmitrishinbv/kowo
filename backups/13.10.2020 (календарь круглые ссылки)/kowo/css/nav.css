@@ -1,0 +1,144 @@
+.main-header .main-nav {
+    position: relative;
+    height: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header .main-nav .menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-header .main-nav .menu ul a {
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    color: #000;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: .7;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.main-header .main-nav .menu .current_page_item a,
+.main-header .main-nav .menu .current_menu_item a,
+.main-header .main-nav .menu .current-lang a
+{
+    font-weight: 700;
+}
+
+
+.main-header .main-nav .menu .lang-item-first {
+    margin-left: 50px;
+}
+
+
+.burger {
+    position: relative;
+    width: 25px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.burger > span {
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    border-radius: 1px;
+
+}
+.burger > span::before,
+.burger > span::after{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 25px;
+    height: 4px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 1px;
+}
+
+.burger > span::before{
+    top: -10px;
+}
+
+.burger > span::after{
+    top: 10px;
+}
+
+.burger.burger-btn_active > span{
+    background: rgba(0,0,0,0);
+}
+
+.burger.burger-btn_active > span::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger.burger-btn_active > span::after{
+    top: 0;
+    transform: rotate(135deg);
+}
+
+
+@media (max-width: 1000px) {
+    .burger.burger-btn_active {
+        position: fixed;
+        top: 49px;
+        right: 30px;
+        margin: 0;
+    }
+
+    .burger {
+        display: block;
+        margin: 42px 0 54px 0;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .burger {
+        margin: 42px 0 54px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger {
+        margin: 35px 0 54px 0;
+    }
+    .burger.burger-btn_active {
+        position: fixed;
+        top: 19px;
+        right: 5px;
+        margin: 0;
+    }
+
+}
+
+@media (max-height: 375px) and (max-width: 812px) {
+    .burger.burger-btn_active {
+        top: 24px;
+    }
+}
+
+@media (max-height: 320px) {
+    .burger.burger-btn_active {
+        top: 19px !important;
+    }
+}
